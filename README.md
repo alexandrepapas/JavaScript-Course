@@ -1,2 +1,2 @@
 # JavaScript-Course
- Curso de JavaScript
+ exercicios e projetos em JS
