@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passos com DOM</title>
+
+    <style>
+        body{
+
+            background-color: rgb(68, 125, 199) ;
+            color: white;
+            font: normal 18pt arial;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Estudos Doom </h1>
+    <p> Aqui vai o restulado</p>
+
+
+    <div id="msg">
+        Clique em mim !
+    </div>
+
+    <p>Aprendendo DOM EM JS</p>
+    
+    <script>
+
+        var corpo= window.document.body
+        var p1= window.document.getElementsByTagName("p")[0]
+        /*
+        window.document.write("está escrito assim "+ p1.innerText)
+        var d= window.document.getElementById("msg")
+        d.style.background="green"
+        d.innerText="estou aguardando..." */
+
+        var d=  window.document.querySelector("div#msg")
+        d.style.background="green"
+    
+    
+
+    </script>
+
+</body>
+</html>
