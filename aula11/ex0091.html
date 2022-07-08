@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fronteira</title>
     <style>
+        
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: large;
             text-align: center;
             background-color: rgb(140, 140, 192);
-        
-            
-
-            
-
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
 
         }
         div#res {
@@ -28,9 +31,7 @@
             border-radius: 30px;
         }
 
-        
-       
-        
+     
         
 
         
@@ -38,7 +39,7 @@
 </head>
     <body>
     
-        
+        <div>
         
     <h1>Passagem para a Fronteira Brasileira</h1>
     <h3>Preencha com seus dados pessoais:</h3>
@@ -48,7 +49,7 @@
         <input type="button" value="Verificar" onclick="verificar()">
         <input type="button" value="Limpar" onclick="reset()">
     <div id="res">Resultado</div>
-
+</div>
         <script>
             function verificar(){
                 var nome = document.getElementById('nick').value
