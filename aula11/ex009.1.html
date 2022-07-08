@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+  <h1>País  em que vive </h1> 
+  Em qual pais você mora <input type="txtpais" name="txtpais" id="txtpais"> ?
+    <input type="button" value="Verificar" onclick="testar()">
+<div id="res">
+    
+</div>
+
+    <script>
+
+        function testar(){
+            var txtpais = window.document.querySelector('input#txtpais')
+
+            var pais=(txtpais.value)
+
+            res.innerHTML=` seu pais atual e ${pais} `
+            if(txtpais=="brasil")
+
+            res.innerHTML ` voce e estrangeiro`
+            
+
+
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>
