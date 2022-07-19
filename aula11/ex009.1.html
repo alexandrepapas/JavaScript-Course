@@ -2,38 +2,85 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pais</title>
-</head>
-<body>
-  <h1>País  em que vive </h1> 
-  Em qual pais você mora <input type="txtpais" name="txtpais" id="txtpais"> ?
-    <input type="button" value="Verificar" onclick="testar()">
-<div id="res">
-    
-</div>
-
-    <script>
-
-        function testar(){
-            var txtpais = window.document.querySelector('input#txtpais')
-
-            var pais=(txtpais.value)
-
-            res.innerHTML=` seu pais atual e ${pais} `
-            if(txtpais=="brasil")
-
-            res.innerHTML ` voce e estrangeiro`
-            
-
-
+    <title>Fronteira</title>
+    <style>
+        
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            text-align: center;
+            background-color: rgb(140, 140, 192);
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
 
         }
+        div#res {
+            margin-top: 20px;
+            font: normal 13pt Arial;
+        }
+    
+        input{
 
-    </script>
+            border: 1px solid;
+            border-radius: 30px;
+        }
 
+    
+        div#tabela{
+            background-color: rgb(222, 218, 236);
+            border-radius: 10%;
+           
+        }
 
-
-</body>
+        
+    </style>
+</head>
+    <body>
+    
+        <div id="tabela">
+        
+    <h1>Passagem para a Fronteira Brasileira</h1>
+    <h3>Preencha com seus dados pessoais:</h3>
+        Nome: <input type="text" name="nick" id="nick"><br><br>
+        Idade: <input type="number" name="idad" id="idad"><br><br>
+        País: <input type="text" name="nacio" id="nacio"><br><br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <input type="button" value="Limpar" onclick="reset()">
+    <div id="res">Resultado</div>
+</div>
+        <script>
+            function verificar(){
+                var nome = document.getElementById('nick').value
+                var idade = Number(document.getElementById('idad').value)
+                var pais = document.getElementById('nacio').value
+                pais = pais.toUpperCase()
+                var res = document.getElementById('res')
+                res.innerHTML = `<p>Bem-Vindo ${nome}!</p>`
+                if (idade >= 18 && pais == 'BRASIL'){
+                    res.style.color = 'green'
+                    res.innerHTML += `<p><strong>SUA PASSAGEM FOI LIBERADA!</strong></p>`
+                } else {
+                    res.style.color = 'red'
+                    res.innerHTML += `<p><strong>SUA PASSAGEM FOI BLOQUEADA!</strong></p>`
+                } 
+            }
+            function reset(){
+                var reset1 = document.getElementById('nick')
+                var reset2 = document.getElementById('idad')
+                var reset3 = document.getElementById('nacio')
+                var reset4 = document.getElementById('res')
+                reset1.value = '';
+                reset2.value = '';
+                reset3.value = '';
+                reset4.innerHTML = 'Resultado';
+                reset4.style.color = 'black';
+            }
+        </script>
+    </body>
 </html>
