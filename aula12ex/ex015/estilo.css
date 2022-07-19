@@ -22,13 +22,17 @@ header{
 
 section{
 
-    background-color: white;
+    background-color: rgb(231, 221, 221);
     border-radius: 10px;
     padding: 10px;
     width: 500px;
-    height: 25px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.363) 3px 3px 10px ;
+    height: 600px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: black;
+        box-shadow: rgba(0, 0, 0, 0.363) 3px 3px 10px ;
 
 
 }
